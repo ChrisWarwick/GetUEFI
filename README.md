@@ -3,8 +3,6 @@ Chris Warwick, @cjwarwickps, November 2015
 
 The function in this module determines the underlying system firmware (BIOS) type - either UEFI or Legacy BIOS.
 
-See the comments at the end of the script file for further detailed notes and references.
-
 Script Structure
 ----------------
 
