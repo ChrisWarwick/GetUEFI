@@ -100,6 +100,9 @@ True
 Version History:
 ---------------
 
+ V1.1 (Current Version)
+  - Updated tags in Module Manifest 
+  
  V1.0 (Original Published Version)
   - Initial release to the PowerShell Gallery 
 
