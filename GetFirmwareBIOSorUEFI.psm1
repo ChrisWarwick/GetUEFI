@@ -365,18 +365,18 @@ Param(
         
         Switch (Get-OSVersion) { 
             {$_ -ge [System.Version]'6.2.0.0'} {
-                Write-Verbose "OS Version $OSVersion, Windows 8.0, Server 2012 or above -> Using GetFirmwareType() API."
+                Write-Verbose "OS Version $_, Windows 8.0, Server 2012 or above -> Using GetFirmwareType() API."
                 $QueryType = 'GetFirmwareType'
                 Break
             }
 
             {$_ -ge [System.Version]'6.1.0.0'} {
-                Write-Verbose "OS Version $OSVersion, Windows 7, Server 2008R2 or above -> Using GetFirmwareEnvironmentVariable() API."
+                Write-Verbose "OS Version $_, Windows 7, Server 2008R2 or above -> Using GetFirmwareEnvironmentVariable() API."
                 $QueryType = 'GetFirmwareEnvironmentVariable'
                 Break
             }
             Default {
-                Write-Verbose "OS Version $OSVersion, Windows Vista, Server 2008 or below -> Using $Env:windir\Panther\setupact.log file."
+                Write-Verbose "OS Version $_, Windows Vista, Server 2008 or below -> Using $Env:windir\Panther\setupact.log file."
                 $QueryType = 'SetupLog'
                 Break
             }
